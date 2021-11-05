@@ -1,0 +1,4 @@
+//ignorieren aller Bilder aufgrund der Größe
+*.jpg
+
+
