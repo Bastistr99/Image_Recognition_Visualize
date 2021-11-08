@@ -1,8 +1,10 @@
 import tensorflow as tf
 import cv2 
 import matplotlib.pyplot as plt
+import tensorflowjs as tfjs
 
 model = tf.keras.models.load_model("CatsVsDogs-CNN.model")
+
 
 def prepare(filepath):
     img_size = 100;
@@ -14,7 +16,4 @@ prediction = model.predict([prepare('IMG-0648.jpg')]);
 
 print(prediction)
 
-
-img = cv2.imread('IMG-0648.jpg')
-plt.imshow(img)
-plt.show()
+tfjs.converters.save_keras_model(model, "tfjsmodel")

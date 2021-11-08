@@ -1,0 +1,16 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "frontend to load tensorflowjs model",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Sebastian Straub",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^3.11.0"
+  }
+}
