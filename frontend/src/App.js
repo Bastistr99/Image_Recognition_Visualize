@@ -9,22 +9,14 @@ function App() {
   const updateUploadedFiles = (files) =>
     setNewUserInfo({ ...newUserInfo, profileImages: files });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    //logic to create new user...
-  };
-
   return (
     <div>
-      <form onSubmit={handleSubmit}>
         <FileUpload
           accept=".jpg,.png,.jpeg"
           label="Profile Image(s)"
           multiple
           updateFilesCb={updateUploadedFiles}
         />
-        <button type="submit">Create New User</button>
-      </form>
     </div>
   );
 }
