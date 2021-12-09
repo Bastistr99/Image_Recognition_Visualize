@@ -1,0 +1,23 @@
+1. User macht ein Foto von sich bzw. lädt er ein Foto hoch
+2. Orginales Foto --> nimmt viel Speicherplatz weg + muss bearbeitet werden auf dem Server
+3. Foto auf dem Gerät resizen 
+4. Resized Foto an Server schicken
+5. Orginals Foto mit Graufilter anzeigen und Rad dreht sich während das Ergebnis kommt
+6. Prozentzahl mit orginalem Foto wird angezeigt
+7. Neues Foto? Neues Modell?
+
+## FLASK Rest-API um Bilder zu speichern
+from flask import Flask
+from flask_restful import Resource, Api, reqparse
+import werkzeug
+
+class UploadImage(Resource):
+   def post(self):
+     parse = reqparse.RequestParser()
+     parse.add_argument('file', type=werkzeug.datastructures.FileStorage, location='files')
+     args = parse.parse_args()
+     image_file = args['file']
+     image_file.save("your_file_name.jpg")
+
+
+
