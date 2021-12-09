@@ -7,11 +7,13 @@ import tensorflow as tf
 import cv2 
 from json import JSONEncoder
 import numpy as np
+from flask_cors import CORS, cross_origin
 
- 
 app = Flask(__name__)
- 
-app.secret_key = "caircocoders-ednalan"
+CORS(app)
+
+
+#app.secret_key = "caircocoders-ednalan"
  
 UPLOAD_FOLDER = './pictures'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -42,14 +44,15 @@ def main():
     return 'Homepage'
  
 @app.route('/upload', methods=['POST'])
+@cross_origin()
 def upload_file():
     # check if the post request has the file part
-    if 'files[]' not in request.files:
+    if 'bild' not in request.files:
         resp = jsonify({'message' : 'No file part in the request'})
         resp.status_code = 400
         return resp
  
-    files = request.files.getlist('files[]')
+    files = request.files.getlist('bild')
      
     errors = {}
     success = False
