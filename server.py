@@ -77,6 +77,7 @@ def upload_file():
         encodedNumpyData = json.dumps(prediction, cls=NumpyArrayEncoder) 
         resp = jsonify({"message": encodedNumpyData})
         resp.status_code = 201
+        print(prediction)
         return resp
     else:
         resp = jsonify(errors)

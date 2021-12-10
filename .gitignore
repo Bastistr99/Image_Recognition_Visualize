@@ -1,6 +1,6 @@
 //ignorieren aller Bilder aufgrund der Größe
 *.jpg
-frontend/node_modules/*
+*node_modules/*
 
 
 
