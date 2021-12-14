@@ -1,13 +1,17 @@
 #app.py
-from flask import Flask, json, request, jsonify
+import io
+import base64
+from flask import Flask, json, request, jsonify, send_file
 import os
 import urllib.request
+from matplotlib import image
 from werkzeug.utils import secure_filename
 import tensorflow as tf
 import cv2 
 from json import JSONEncoder
 import numpy as np
 from flask_cors import CORS, cross_origin
+from PIL import Image
 
 app = Flask(__name__)
 CORS(app)
@@ -42,6 +46,23 @@ class NumpyArrayEncoder(JSONEncoder):
 @app.route('/')
 def main():
     return 'Homepage'
+
+
+@app.route('/getimage/<filename>')
+def getimage(filename):
+    filepath = "pictures/" + filename
+    filename_unuseful, file_extension = os.path.splitext(filepath)
+    new_extension = file_extension.replace(".","")
+    if new_extension == "jpg" or "JPG":
+        new_extension = "jpeg"
+    im = Image.open(filepath)
+    data = io.BytesIO()
+    im.save(data, new_extension)
+    encoded_img_data = base64.b64encode(data.getvalue())
+    return encoded_img_data
+
+    
+
  
 @app.route('/upload', methods=['POST'])
 @cross_origin()
@@ -74,8 +95,10 @@ def upload_file():
         return resp
     if success:
         prediction = model.predict(prepare(filepath), verbose=1)
+        print(prediction[0][0])
         encodedNumpyData = json.dumps(prediction, cls=NumpyArrayEncoder) 
-        resp = jsonify({"message": encodedNumpyData})
+        
+        resp = jsonify({"message": encodedNumpyData}, {"filename": filename})
         resp.status_code = 201
         print(prediction)
         return resp
