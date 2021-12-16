@@ -12,10 +12,19 @@ from json import JSONEncoder
 import numpy as np
 from flask_cors import CORS, cross_origin
 from PIL import Image
+from removebg import RemoveBg
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+apikey = os.getenv("api-token")
+rmbg = RemoveBg(apikey, "error.log")
+
+
 
 app = Flask(__name__)
 CORS(app)
-
 
 #app.secret_key = "caircocoders-ednalan"
  
@@ -27,7 +36,6 @@ ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
  
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
 
 
 model = tf.keras.models.load_model("CatsVsDogs-CNN.model")
@@ -43,6 +51,10 @@ class NumpyArrayEncoder(JSONEncoder):
             return obj.tolist()
         return JSONEncoder.default(self, obj)
 
+def get_base64_encoded_image(image_path):
+    with open(image_path, "rb") as img_file:
+        return base64.b64encode(img_file.read())
+
 @app.route('/')
 def main():
     return 'Homepage'
@@ -50,22 +62,13 @@ def main():
 
 @app.route('/getimage/<filename>')
 def getimage(filename):
-    filepath = "pictures/" + filename
-    filename_unuseful, file_extension = os.path.splitext(filepath)
-    new_extension = file_extension.replace(".","")
-    if new_extension == "jpg" or "JPG":
-        new_extension = "jpeg"
-    im = Image.open(filepath)
-    data = io.BytesIO()
-    im.save(data, new_extension)
-    encoded_img_data = base64.b64encode(data.getvalue())
+    filepath = "pictures/" + filename + "_no_bg.png"
+    encoded_img_data = get_base64_encoded_image(filepath)
+    os.remove(filepath)
     return encoded_img_data
-
-    
-
  
+
 @app.route('/upload', methods=['POST'])
-@cross_origin()
 def upload_file():
     # check if the post request has the file part
     if 'bild' not in request.files:
@@ -84,6 +87,9 @@ def upload_file():
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             filepath = "./pictures/" + filename
+            image = Image.open(filepath)
+            rmbg.remove_background_from_img_file(filepath)
+            width, height = image.size
             success = True
         else:
             errors[file.filename] = 'File type is not allowed'
@@ -94,13 +100,11 @@ def upload_file():
         resp.status_code = 500
         return resp
     if success:
-        prediction = model.predict(prepare(filepath), verbose=1)
-        print(prediction[0][0])
+        prediction = model.predict(prepare(filepath), verbose=0)
         encodedNumpyData = json.dumps(prediction, cls=NumpyArrayEncoder) 
-        
-        resp = jsonify({"message": encodedNumpyData}, {"filename": filename})
+        resp = jsonify({"message": encodedNumpyData, "prediction": str(prediction[0][0]), "height": str(height), "width": str(width)})
+        os.remove(filepath)
         resp.status_code = 201
-        print(prediction)
         return resp
     else:
         resp = jsonify(errors)
