@@ -1,0 +1,39 @@
+Aufgaben, die erfüllt werden müssen:
+
+Front-End:
+ - Logik für das Laden von Bilder und die Zwischenzeit überlegen (Während Bild lädt Fragezeichen rotieren lassen oder etwas in der Art)
+ - Logik zum Switchen von verschiedenen Designs überlgen (Startseite vorher != Seite nach Upload)
+ - Logik zum Displayen wenn es zu einer Fehlermeldung kommt
+ - Aktuelle Logik überdenken bzw. auf Schwachstellen prüfen
+ - Responsiveness
+
+Back-End:
+ - Responsetime verbessern wenn möglich (Schwachstelle ist vermutlich die Hintergrundentfernung)
+ - server.py aufräumen bzw. verbessern oder vereinfachen
+
+ - Tensorflowmodell
+    - Modell muss Prozentzahl anzeigen
+    - Modell auf wirkliche Ergebnisse prüfen, wie oft zeigt es bei Menschen Hund an und wie oft Katze
+    - Modell neu trainieren oder Modell aus dem Internet benutzen?
+    - Modell für Hintergrundentfernung selber entwickeln? Mehr Arbeit - dafür günstiger 
+
+Design:
+ - Startseite
+ - Design für nach dem Upload (inkl. für neue Versuche)
+ - Design für Fehlermeldungen  
+
+Hosting:
+ - Reicht die App auf meinem Server oder wie ist es am besten für die App in den App-Stores
+ - Welche Einstellungen müssen getätigt werden um die Applikation live zu schalten (bzg. Sicherheit)
+ 
+
+App:
+ - Was muss für eine App vorhanden sein?
+ - Bleibt die Logik gleich?
+ - Flutter oder React Native?
+ - Was ist besser oder einfacher?
+
+Sonstiges:
+ - brauchen wir Unterstützung oder schaffen wir das zu 2?
+ - Ich hab mich an dem Design etwas pribiert aber sieht übelst whack aus
+ - Wer hat da Know How?

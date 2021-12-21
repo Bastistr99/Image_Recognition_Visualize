@@ -2,6 +2,9 @@ import './App.css';
 import { useState } from 'react';
 import axios from 'axios';
 import { questionmarkimage } from './questionmarkimage';
+import { BottomNavigation } from '@mui/material';
+import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
+
 
 function App() {
 
@@ -16,6 +19,7 @@ function App() {
     let res = await bild.target.files[0]
     setBilder(res)
     setFilename(res.name)
+    
   }
   const get_image = () => {
     axios.get("http://127.0.0.1:5000/getimage/" + filename).then(res => {
@@ -36,10 +40,6 @@ function App() {
       let picwidth = parseInt(res.data.width)
       let picheight = parseInt(res.data.height)
      
-
-      console.log("Height: " + picheight)
-      console.log("Width: " + picwidth)
-      
       //Für Fotos im Querformat
       if(picheight < picwidth){
         let count = getDigitCount(picwidth)
@@ -50,8 +50,6 @@ function App() {
         if (picwidth <= 2000){
           count = 2
         }
-        console.log("New Width: " + (picwidth/count))
-        console.log("New height: " + (picheight/count))
         setHeight((picheight/count))
         setWidth((picwidth/count))
         }
@@ -65,7 +63,6 @@ function App() {
       if (picheight <= 2000){
         count = 2
       } 
-      console.log("New Height: " + (picheight/count))
       setHeight((picheight/count))
       setWidth((picwidth/count))
       }
@@ -75,10 +72,15 @@ function App() {
   
   return (
     <div className="App">
-      <input type="file" onChange={selectBild} accept="image/*" />
+      <input type="file" onChange={selectBild} accept="image/*" id="inputfile" />
+      <label for="inputfile">
+        <AddToPhotosIcon/> &nbsp; 
+        Choose a Photo!
+      </label>
       <button onClick={uploadBild}>Upload</button>
       <h1>{ergebnis}</h1>
       <img src={`data:image/jpeg;base64,${resbild}`} width={width} height={height} alt="questionmark"/>
+      <BottomNavigation></BottomNavigation>
     </div>
   );
 }
