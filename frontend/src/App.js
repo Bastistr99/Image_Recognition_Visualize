@@ -2,8 +2,10 @@ import './App.css';
 import { useState } from 'react';
 import axios from 'axios';
 import { questionmarkimage } from './questionmarkimage';
-import { BottomNavigation } from '@mui/material';
+import CheckIcon from '@mui/icons-material/Check';
+
 import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
+import { CircularProgress } from "@mui/material"
 
 
 function App() {
@@ -14,39 +16,33 @@ function App() {
   const [resbild, setResbild] = useState(questionmarkimage)
   const [height, setHeight] = useState(200)
   const [width, setWidth] = useState(200)
+  const [loading, setLoading] = useState(true)
+  const [hacken, setHacken] = useState(false)
   const [buttontext, setButtonText] = useState("Upload!")
   const [buttonstyle, setButtonstyle] = useState({
-    height: "30px",
-    width: "100px",
+    height: "80px",
+    width: "200px",
     margin: "auto",
     top: "40%",
     bottom: "0",
     left: "0",
-    right: "0"
-  })
-  const [labelstyle, setLabelstyle] = useState({
-    color: "white",
-    height: "60px",
-    width: "200px",
-    backgroundColor: "#f5af09",
-    position: "absolute",
-    margin: "auto",
-    top: "0",
-    bottom: "0",
-    left: "0",
     right: "0",
-    fontSize: "large",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+    borderRadius: "30px",
+    backgroundColor: "#ef9d10",
+    color: "#3b4d61"
   })
+  const [labelstyle, setLabelstyle] = useState({})
+
+  const [ergebnisstyle, setErgebnisstyle] = useState({
+    display: "none"
+  })
+  
 
   const selectBild = async (bild) => {
     let res = await bild.target.files[0]
     setBilder(res)
     setFilename(res.name)
-    
+    setHacken(true)
   }
   const get_image = () => {
     axios.get("http://127.0.0.1:5000/getimage/" + filename).then(res => {
@@ -58,44 +54,37 @@ function App() {
   }
 
   const uploadBild = () => {
-    
+    setLoading(false)
+    setHacken(false)
     // Change Position from the Upload Button from center to down right
     setButtonstyle({
-      height: "30px",
-      width: "150px",
+      height: "60px",
+      width: "200px",
       margin: "auto",
-      top: "80%",
       bottom: "0",
-      left: "80%",
-      right: "0"
+      left: "0",
+      right: "0",
+      borderRadius: "30px",
+      backgroundColor: "#ef9d10",
+      color: "#3b4d61",
+      top: "80%"
     })
     setButtonText("Try Again!")
-    setLabelstyle({color: "white",
-    height: "60px",
-    width: "200px",
-    backgroundColor: "#f5af09",
-    position: "absolute",
-    margin: "auto",
-    top: "60%",
-    bottom: "0",
-    left: "80%",
-    right: "0",
-    fontSize: "large",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+    setLabelstyle({
+    top: "60%"
   })
     //Upload Image 
     const formData = new FormData();
     formData.append('bild', bilder);
     axios.post("http://127.0.0.1:5000/upload",formData).then(res => {
       get_image()
+      setErgebnisstyle({display: "block"})
         if (parseFloat(res.data.prediction) < 0.5){
           setErgebnis("Du bist ein Hund!")
         } else {
           setErgebnis("Du bist eine Katze!")
         }
+      setLoading(true)
       let picwidth = parseInt(res.data.width)
       let picheight = parseInt(res.data.height)
      
@@ -132,13 +121,15 @@ function App() {
   return (
     <div className="App">
       <input type="file" onChange={selectBild} accept="image/*" id="inputfile" />
+    
       <label for="inputfile" style={labelstyle}>
         <AddToPhotosIcon/> &nbsp; 
-        Choose a Photo!
+        Choose a Photo! &nbsp;
+        {hacken ? (<CheckIcon />) : ("")}
       </label>
       <button id="uploadbutton" onClick={uploadBild} style={buttonstyle}>{buttontext}</button>
       <img src={`data:image/jpeg;base64,${resbild}`} width={width} height={height} alt="questionmark"/>
-      <h1>{ergebnis}</h1>
+      <div className='ergebnis' style={ergebnisstyle}>{loading ? (ergebnis) : (<CircularProgress />)}</div>
     </div>
   );
 }
