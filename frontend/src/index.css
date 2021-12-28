@@ -52,11 +52,7 @@ label {
 }
 
 h1 {
-  height: 30px;
-  width: 100px;
+  height: 60px;
+  width: 200px;
   margin: auto;
-  top: 40% ;
-  bottom: 0;
-  left: 0;
-  right: 0;
 } 

@@ -13,3 +13,27 @@ INFO:werkzeug:127.0.0.1 - - [19/Dec/2021 21:59:16] "[31m[1mPOST /upload HTTP/1
 INFO:werkzeug:127.0.0.1 - - [19/Dec/2021 22:05:07] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
 INFO:werkzeug:127.0.0.1 - - [19/Dec/2021 22:05:07] "GET /getimage/cat.10.jpg HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in '/Users/sebastianstraub/Documents/Image_Recognition_Visualize/server.py', reloading
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2021 11:26:08] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2021 11:26:08] "GET /getimage/cocker-spaniel-2785074_640.jpg HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 13:55:28] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 13:55:28] "GET /getimage/download.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:16:37] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:16:37] "GET /getimage/sdf.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:18:52] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:19:09] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:20:17] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:29:35] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:29:35] "GET /getimage/cocker-spaniel-2785074_640.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:30:02] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:31:11] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:31:11] "GET /getimage/cocker-spaniel-2785074_640.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:32:02] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:32:03] "GET /getimage/cocker-spaniel-2785074_640.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:32:50] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:32:50] "GET /getimage/cocker-spaniel-2785074_640.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:33:32] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:33:32] "GET /getimage/cocker-spaniel-2785074_640.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:36:18] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 14:36:18] "GET /getimage/sdf-removebg-preview.png HTTP/1.1" 200 -
