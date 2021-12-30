@@ -40,7 +40,8 @@
 .ergebnis {
   width: 300px;
   height: 200px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   font-size: xx-large;
   position: absolute;
@@ -51,5 +52,79 @@
   bottom: 0;
   color: #ef9d10;
   display: none;
-  
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 1.3fr 1.2fr;
+  grid-template-rows: 0.6fr 2.1fr 0.8fr 0.7fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Heading Heading"
+    "Picture1 Picture2"
+    "Select-Image Select-Image"
+    "Upload-Image Upload-Image";
+}
+.Heading {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  grid-area: Heading;
+  color: #3b4d61;
+
+}
+.Picture1 {
+  grid-area: Picture1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+}
+.Picture1 h2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.Picture2 {
+  grid-area: Picture2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+}
+.Picture2 h2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.Select-Image {
+  grid-area: Select-Image;
+  height: 100%;
+}
+.Upload-Image {
+  grid-area: Upload-Image;
+  height: 100%;
+}
+.button {
+  position: "relative";
+  display: "flex";
+  height: "80px";
+  width: "200px";
+  margin: "auto";
+  top: "0";
+  bottom: "0";
+  left: "0";
+  right: "0";
+  border-radius: "30px";
+  background-color: "#ef9d10";
+  color: "#3b4d61";
 }

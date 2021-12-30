@@ -69,3 +69,343 @@ INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 23:20:01] "[35m[1mPOST /upload HTTP/1
 INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 23:20:01] "GET /getimage/cat-g2c34ccd26_1280.jpg HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 23:21:21] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
 INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 23:21:21] "GET /getimage/cocker-spaniel-2785074_640.jpg HTTP/1.1" 200 -
+ERROR:server:Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 91, in upload_file
+    rmbg.remove_background_from_img_file(filepath)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/removebg/removebg.py", line 31, in remove_background_from_img_file
+    response.raise_for_status()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/requests/models.py", line 953, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 402 Client Error: Payment Required for url: https://api.remove.bg/v1.0/removebg
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 23:32:43] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+ERROR:server:Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 91, in upload_file
+    rmbg.remove_background_from_img_file(filepath)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/removebg/removebg.py", line 31, in remove_background_from_img_file
+    response.raise_for_status()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/requests/models.py", line 953, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 402 Client Error: Payment Required for url: https://api.remove.bg/v1.0/removebg
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 23:35:16] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+ERROR:server:Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 91, in upload_file
+    rmbg.remove_background_from_img_file(filepath)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/removebg/removebg.py", line 31, in remove_background_from_img_file
+    response.raise_for_status()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/requests/models.py", line 953, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 402 Client Error: Payment Required for url: https://api.remove.bg/v1.0/removebg
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2021 23:36:48] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 17:20:57] "[31m[1mGET /upload HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 17:20:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 17:21:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 17:21:14] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/dog-3277416_1280.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/dog-3277416_1280.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 17:21:14] "[35m[1mGET /getimage/dog-3277416_1280.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 17:21:36] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/cocker-spaniel-2785074_640.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/cocker-spaniel-2785074_640.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 17:21:36] "[35m[1mGET /getimage/cocker-spaniel-2785074_640.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 17:21:51] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/cocker-spaniel-2785074_640.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/cocker-spaniel-2785074_640.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 17:21:52] "[35m[1mGET /getimage/cocker-spaniel-2785074_640.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 17:22:00] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/cocker-spaniel-2785074_640.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/cocker-spaniel-2785074_640.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 17:22:00] "[35m[1mGET /getimage/cocker-spaniel-2785074_640.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:21:58] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/cat-g2c34ccd26_1280.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/cat-g2c34ccd26_1280.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:21:58] "[35m[1mGET /getimage/cat-g2c34ccd26_1280.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:22:18] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/cat-g2c34ccd26_1280.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/cat-g2c34ccd26_1280.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:22:18] "[35m[1mGET /getimage/cat-g2c34ccd26_1280.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:23:28] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/cat-g2c34ccd26_1280.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/cat-g2c34ccd26_1280.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:23:28] "[35m[1mGET /getimage/cat-g2c34ccd26_1280.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:23:45] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/puppy-1903313_1280.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/puppy-1903313_1280.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:23:45] "[35m[1mGET /getimage/puppy-1903313_1280.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:25:50] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/dog-3277416_1280.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/dog-3277416_1280.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:25:50] "[35m[1mGET /getimage/dog-3277416_1280.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:27:32] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/cocker-spaniel-2785074_640.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/cocker-spaniel-2785074_640.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:27:32] "[35m[1mGET /getimage/cocker-spaniel-2785074_640.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:29:08] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/puppy-1903313_1280.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/puppy-1903313_1280.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:29:08] "[35m[1mGET /getimage/puppy-1903313_1280.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:29:55] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/cat-g2c34ccd26_1280.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/cat-g2c34ccd26_1280.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:29:55] "[35m[1mGET /getimage/cat-g2c34ccd26_1280.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:30:33] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/cat-g2c34ccd26_1280.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/cat-g2c34ccd26_1280.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:30:33] "[35m[1mGET /getimage/cat-g2c34ccd26_1280.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:31:13] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+ERROR:server:Exception on /getimage/cat-g2c34ccd26_1280.jpg [GET]
+Traceback (most recent call last):
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bastistr/Library/Python/3.8/lib/python/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 66, in getimage
+    encoded_img_data = get_base64_encoded_image(filepath)
+  File "/Users/bastistr/Documents/dev/Image_Recognition_Visualize/server.py", line 55, in get_base64_encoded_image
+    with open(image_path, "rb") as img_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'pictures/cat-g2c34ccd26_1280.jpg'
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:31:13] "[35m[1mGET /getimage/cat-g2c34ccd26_1280.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:33:19] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:33:19] "GET /getimage/puppy-1903313_1280.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:33:38] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:33:38] "GET /getimage/cat-g2c34ccd26_1280.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:34:27] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:34:27] "GET /getimage/sdf-removebg-preview.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:35:00] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:35:00] "GET /getimage/cat-g2c34ccd26_1280.jpg HTTP/1.1" 200 -

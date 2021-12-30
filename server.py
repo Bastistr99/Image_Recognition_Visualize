@@ -62,7 +62,7 @@ def main():
 
 @app.route('/getimage/<filename>')
 def getimage(filename):
-    filepath = "pictures/" + filename + "_no_bg.png"
+    filepath = "pictures/" + filename
     encoded_img_data = get_base64_encoded_image(filepath)
     os.remove(filepath)
     return encoded_img_data
@@ -88,7 +88,7 @@ def upload_file():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             filepath = "./pictures/" + filename
             image = Image.open(filepath)
-            rmbg.remove_background_from_img_file(filepath)
+            # rmbg.remove_background_from_img_file(filepath)
             width, height = image.size
             success = True
         else:
@@ -103,7 +103,7 @@ def upload_file():
         prediction = model.predict(prepare(filepath), verbose=0)
         encodedNumpyData = json.dumps(prediction, cls=NumpyArrayEncoder) 
         resp = jsonify({"message": encodedNumpyData, "prediction": str(prediction[0][0]), "height": str(height), "width": str(width)})
-        os.remove(filepath)
+        # os.remove(filepath)
         resp.status_code = 201
         return resp
     else:
