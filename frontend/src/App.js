@@ -5,7 +5,6 @@ import { cat, dog, menschbild, dog2 } from "./questionmarkimage";
 import CheckIcon from "@mui/icons-material/Check";
 
 import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
-import { CircularProgress } from "@mui/material";
 
 function App() {
   const [bilder, setBilder] = useState({});
@@ -19,23 +18,21 @@ function App() {
   const [hacken, setHacken] = useState(false);
   const [buttontext, setButtonText] = useState("Upload!");
 
-
- const buttonstyle = {
-  position: "relative",
-  display: "flex",
-  height: "80px",
-  width: "200px",
-  margin: "auto",
-  top: "0",
-  bottom: "0",
-  left: "0",
-  right: "0",
-  borderRadius: "30px",
-  backgroundColor: "#ef9d10",
-  border: "2px solid #3b4d61",
-  color: "#3b4d61"
- }
-
+  const buttonstyle = {
+    position: "relative",
+    display: "flex",
+    height: "80px",
+    width: "200px",
+    margin: "auto",
+    top: "0",
+    bottom: "0",
+    left: "0",
+    right: "0",
+    borderRadius: "30px",
+    backgroundColor: "#ef9d10",
+    border: "2px solid #3b4d61",
+    color: "#3b4d61",
+  };
   const selectBild = async (bild) => {
     let res = await bild.target.files[0];
     setBilder(res);
@@ -44,12 +41,80 @@ function App() {
   };
   const get_image = () => {
     axios.get("http://127.0.0.1:5000/getimage/" + filename).then((res) => {
-      console.log(res.data)
       setMenschBild(res.data);
     });
   };
-  const getDigitCount = (number) => {
-    return Math.max(Math.floor(Math.log10(Math.abs(number))), 0) + 1;
+
+  const getFirstDigit = (number) => {
+    while ( number >= 10){
+      number /= 10;
+    }
+    return Math.floor(number);
+  };
+
+  const getPictureFormat = (picwidth, picheight) => {
+    console.log("Height: " + picheight)
+    console.log("Width: " + picwidth)
+    //Für Fotos im Querformat und Quadrat
+    if (picwidth >= picheight) {
+      let count = getFirstDigit(picwidth);
+      console.log(count)
+      if (picwidth < 500) {
+        setWidth(picwidth);
+        setHeight(picheight);
+      } else {
+        if (picwidth <= 2000) {
+          count = 2;
+          let new_width = picwidth / count;
+          let new_heigth = picheight / count;
+          setWidth(new_width);
+          setHeight(new_heigth);
+          getPictureFormat(new_width, new_heigth)
+        } else {
+          let new_width = picwidth / count;
+          let new_heigth = picheight / count;
+          setWidth(new_width);
+          setHeight(new_heigth);
+          getPictureFormat(new_width, new_heigth)
+        }
+      }
+    }
+    //Für Fotos im Hochformat
+    else {
+      let count = getFirstDigit(picheight);
+      console.log(count)
+      if (picheight < 500) {
+        setWidth(picwidth);
+        setHeight(picheight);
+      } else {
+        if (picheight <= 2000) {
+          count = 2;
+          let new_width = picwidth / count;
+          let new_heigth = picheight / count;
+          setWidth(new_width);
+          setHeight(new_heigth);
+          getPictureFormat(new_width, new_heigth)
+        } else {
+          let new_width = picwidth / count;
+          let new_heigth = picheight / count;
+          setWidth(new_width);
+          setHeight(new_heigth);
+          getPictureFormat(new_width, new_heigth)
+        }
+      }
+    }
+  };
+  
+  const getPredictionPercentage = (prediction) => {
+    if (parseFloat(prediction) < 0.5) {
+      setCatDog(dog2);
+      setErgebnis("Zu " + (100 - parseFloat(prediction)) + "% ein..");
+      setErgebnistxt("Hund!");
+    } else {
+      setCatDog(cat);
+      setErgebnis("Zu " + parseFloat(prediction) * 100 + "% eine..");
+      setErgebnistxt("Katze!");
+    }
   };
 
   const uploadBild = () => {
@@ -60,47 +125,13 @@ function App() {
     formData.append("bild", bilder);
     axios.post("http://127.0.0.1:5000/upload", formData).then((res) => {
       get_image();
-      
-      console.log(parseFloat(res.data.prediction))
-      if (parseFloat(res.data.prediction) < 0.5) {
-        setCatDog(dog2)
-        setErgebnis("Zu " + (100 - parseFloat(res.data.prediction)) + "% ein..");
-        setErgebnistxt("Hund!")
-      } else {
-        setCatDog(cat)
-        setErgebnis("Zu " + (parseFloat(res.data.prediction)*100) + "% eine..");
-        setErgebnistxt("Katze!")
-      }
+      //Get Prediction and set Prediction and Pictures to the result
+      getPredictionPercentage(res.data.prediction);
+
+      //Format der Fotos bestimmen
       let picwidth = parseInt(res.data.width);
       let picheight = parseInt(res.data.height);
-
-      //Für Fotos im Querformat
-      if (picheight < picwidth) {
-        let count = getDigitCount(picwidth);
-        if (picwidth < 1000) {
-          setHeight(picheight);
-          setWidth(picwidth);
-        } else {
-          if (picwidth <= 2000) {
-            count = 2;
-          }
-          setHeight(picheight / count);
-          setWidth(picwidth / count);
-        }
-      } else {
-        let count = getDigitCount(picheight);
-        //Für Fotos im Hochformat
-        if (picheight < 1000) {
-          setHeight(picheight);
-          setWidth(picwidth);
-        } else {
-          if (picheight <= 2000) {
-            count = 2;
-          }
-          setHeight(picheight / count);
-          setWidth(picwidth / count);
-        }
-      }
+      getPictureFormat(picwidth, picheight);
     });
   };
 
@@ -147,9 +178,13 @@ function App() {
       </div>
       <div class="Upload-Image">
         <div>
-          <button className="uploadbutton" onClick={uploadBild} style={buttonstyle}>
-          <h1>{buttontext}</h1>
-        </button>
+          <button
+            className="uploadbutton"
+            onClick={uploadBild}
+            style={buttonstyle}
+          >
+            <h1>{buttontext}</h1>
+          </button>
         </div>
       </div>
     </div>

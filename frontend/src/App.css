@@ -78,12 +78,13 @@
 
 }
 .Picture1 {
+  background-color: rgb(233, 249, 255);
   grid-area: Picture1;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 80%;
+  width: 100%;
 }
 .Picture1 h2 {
   position: relative;
@@ -93,11 +94,12 @@
 }
 .Picture2 {
   grid-area: Picture2;
+  background-color: rgb(252, 241, 241);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 80%;
+  width: 100%;
 }
 .Picture2 h2 {
   position: relative;
