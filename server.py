@@ -61,6 +61,7 @@ def main():
 
 
 @app.route('/getimage/<filename>')
+@cross_origin()
 def getimage(filename):
     filepath = "pictures/" + filename
     encoded_img_data = get_base64_encoded_image(filepath)
@@ -69,6 +70,7 @@ def getimage(filename):
  
 
 @app.route('/upload', methods=['POST'])
+@cross_origin()
 def upload_file():
     # check if the post request has the file part
     if 'bild' not in request.files:

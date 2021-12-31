@@ -19,9 +19,6 @@ function App() {
   const [hacken, setHacken] = useState(false);
   const [buttontext, setButtonText] = useState("Upload!");
 
-  const [ergebnisstyle, setErgebnisstyle] = useState({
-    display: "none",
-  });
 
  const buttonstyle = {
   position: "relative",
@@ -63,7 +60,7 @@ function App() {
     formData.append("bild", bilder);
     axios.post("http://127.0.0.1:5000/upload", formData).then((res) => {
       get_image();
-      setErgebnisstyle({ display: "block" });
+      
       console.log(parseFloat(res.data.prediction))
       if (parseFloat(res.data.prediction) < 0.5) {
         setCatDog(cat)
@@ -118,8 +115,8 @@ function App() {
           <img
             src={`data:image/jpeg;base64,${mensch}`}
             alt="mensch"
-            width={400}
-            height={400}
+            width={width}
+            height={height}
           />
         </div>
       </div>
@@ -129,8 +126,8 @@ function App() {
           <img
             src={`data:image/jpeg;base64,${catdog}`}
             alt="questionmark"
-            width={400}
-            height={400}
+            width={width}
+            height={height}
           />
         </div>
       </div>

@@ -409,3 +409,8 @@ INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:34:27] "[35m[1mPOST /upload HTTP/1
 INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:34:27] "GET /getimage/sdf-removebg-preview.png HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:35:00] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
 INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:35:00] "GET /getimage/cat-g2c34ccd26_1280.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:53:47] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:53:47] "GET /getimage/cat-g2c34ccd26_1280.jpg HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 02:55:32] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 02:55:32] "GET /getimage/dog-3277416_1280.jpg HTTP/1.1" 200 -
