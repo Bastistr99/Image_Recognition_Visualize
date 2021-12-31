@@ -414,3 +414,13 @@ INFO:werkzeug:127.0.0.1 - - [30/Dec/2021 20:53:47] "GET /getimage/cat-g2c34ccd26
 INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 02:55:32] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
 INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 02:55:32] "GET /getimage/dog-3277416_1280.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 03:04:07] "[31m[1mGET /upload HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 03:04:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 03:06:11] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 03:06:11] "GET /getimage/cat-g2c34ccd26_1280.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 03:11:37] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 03:11:37] "GET /getimage/cocker-spaniel-2785074_640.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 03:15:18] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 03:15:18] "GET /getimage/puppy-1207816_640.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 03:15:29] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 03:15:29] "GET /getimage/maltese-1123016_1280.jpg HTTP/1.1" 200 -

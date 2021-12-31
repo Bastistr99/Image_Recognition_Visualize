@@ -63,13 +63,13 @@ function App() {
       
       console.log(parseFloat(res.data.prediction))
       if (parseFloat(res.data.prediction) < 0.5) {
-        setCatDog(cat)
-        setErgebnis("Zu " + (100 - parseFloat(res.data.prediction)) + "% eine..");
-        setErgebnistxt("Katze!")
-      } else {
         setCatDog(dog2)
-        setErgebnis("Zu " + (parseFloat(res.data.prediction)*100) + "% ein..");
+        setErgebnis("Zu " + (100 - parseFloat(res.data.prediction)) + "% ein..");
         setErgebnistxt("Hund!")
+      } else {
+        setCatDog(cat)
+        setErgebnis("Zu " + (parseFloat(res.data.prediction)*100) + "% eine..");
+        setErgebnistxt("Katze!")
       }
       let picwidth = parseInt(res.data.width);
       let picheight = parseInt(res.data.height);
