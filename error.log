@@ -461,3 +461,7 @@ INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 17:48:28] "[35m[1mPOST /upload HTTP/1
 INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 17:48:28] "GET /getimage/animal-3782188.jpg HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 17:49:15] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
 INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 17:49:16] "GET /getimage/animal-3782188.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 18:03:13] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 18:03:13] "GET /getimage/animal-3782188.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 18:05:45] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [31/Dec/2021 18:05:45] "GET /getimage/animal-3782188.jpg HTTP/1.1" 200 -

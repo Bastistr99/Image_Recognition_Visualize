@@ -1,41 +1,12 @@
-#app.py
-import io
-import base64
-from flask import Flask, json, request, jsonify, send_file
-import os
-import urllib.request
-from matplotlib import image
-from werkzeug.utils import secure_filename
 import tensorflow as tf
-import cv2 
+import cv2
 from json import JSONEncoder
+import base64
 import numpy as np
-from flask_cors import CORS, cross_origin
 from PIL import Image
-from removebg import RemoveBg
-from dotenv import load_dotenv
-
-
-load_dotenv()
-
-apikey = os.getenv("api-token")
-rmbg = RemoveBg(apikey, "error.log")
-
-
-
-app = Flask(__name__)
-CORS(app)
-
-#app.secret_key = "caircocoders-ednalan"
- 
-UPLOAD_FOLDER = './pictures'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
- 
-ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
- 
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+from werkzeug.utils import secure_filename
+from flask import json, request, jsonify
+import os
 
 
 model = tf.keras.models.load_model("CatsVsDogs-CNN.model")
@@ -55,23 +26,13 @@ def get_base64_encoded_image(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read())
 
-@app.route('/')
-def main():
-    return 'Homepage'
-
-
-@app.route('/getimage/<filename>')
-@cross_origin()
-def getimage(filename):
+def get_image_route(filename):
     filepath = "pictures/" + filename
     encoded_img_data = get_base64_encoded_image(filepath)
     os.remove(filepath)
     return encoded_img_data
- 
 
-@app.route('/upload', methods=['POST'])
-@cross_origin()
-def upload_file():
+def upload_route(allowed_file, app):
     # check if the post request has the file part
     if 'bild' not in request.files:
         resp = jsonify({'message' : 'No file part in the request'})
@@ -90,7 +51,7 @@ def upload_file():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             filepath = "./pictures/" + filename
             image = Image.open(filepath)
-            rmbg.remove_background_from_img_file(filepath)
+            # rmbg.remove_background_from_img_file(filepath)
             width, height = image.size
             success = True
         else:
@@ -112,6 +73,3 @@ def upload_file():
         resp = jsonify(errors)
         resp.status_code = 500
         return resp
- 
-if __name__ == '__main__':
-    app.run(debug=True)

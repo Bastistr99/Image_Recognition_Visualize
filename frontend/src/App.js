@@ -42,6 +42,7 @@ function App() {
   const get_image = () => {
     axios.get("http://127.0.0.1:5000/getimage/" + filename).then((res) => {
       setMenschBild(res.data);
+
     });
   };
 
@@ -127,6 +128,7 @@ function App() {
       get_image();
       //Get Prediction and set Prediction and Pictures to the result
       getPredictionPercentage(res.data.prediction);
+      console.log(res)
 
       //Format der Fotos bestimmen
       let picwidth = parseInt(res.data.width);
