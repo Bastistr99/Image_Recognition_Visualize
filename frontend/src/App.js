@@ -40,7 +40,7 @@ function App() {
     setHacken(true);
   };
   const get_image = () => {
-    axios.get("http://127.0.0.1:5000/getimage/" + filename).then((res) => {
+    axios.get("http://basti.mkth.eu:5000/getimage/" + filename).then((res) => {
       setMenschBild(res.data);
 
     });
@@ -124,8 +124,8 @@ function App() {
     //Upload Image
     const formData = new FormData();
     formData.append("bild", bilder);
-    axios.post("http://127.0.0.1:5000/upload", formData).then((res) => {
-      get_image();
+    axios.post("http://basti.mkth.eu:5000/upload", formData).then((res) => {
+     get_image();
       //Get Prediction and set Prediction and Pictures to the result
       getPredictionPercentage(res.data.prediction);
       console.log(res)
