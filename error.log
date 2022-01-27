@@ -567,3 +567,231 @@ INFO:werkzeug:205.185.117.203 - - [19/Jan/2022 06:48:01] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:205.185.122.184 - - [19/Jan/2022 06:48:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 INFO:werkzeug:109.43.177.11 - - [19/Jan/2022 13:11:42] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
 INFO:werkzeug:109.43.177.11 - - [19/Jan/2022 13:11:43] "GET /getimage/maltese-1123016_1280.jpg HTTP/1.1" 200 -
+INFO:werkzeug:109.43.177.11 - - [19/Jan/2022 14:26:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.225.189.194 - - [19/Jan/2022 14:26:55] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:172.225.189.194 - - [19/Jan/2022 14:26:55] "GET /getimage/image.jpg HTTP/1.1" 200 -
+INFO:werkzeug:193.196.170.5 - - [19/Jan/2022 14:27:50] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+INFO:werkzeug:193.196.170.5 - - [19/Jan/2022 14:27:50] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+ERROR:werkzeug:45.227.254.79 - - [19/Jan/2022 16:07:37] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [19/Jan/2022 16:07:37] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.227.254.79 - - [19/Jan/2022 16:07:37] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [19/Jan/2022 16:07:37] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:71.6.146.186 - - [19/Jan/2022 20:49:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:71.6.146.186 - - [19/Jan/2022 20:49:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:werkzeug:71.6.146.186 - - [19/Jan/2022 20:50:27] code 400, message Bad request syntax ('\x03]kèa\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+INFO:werkzeug:71.6.146.186 - - [19/Jan/2022 20:50:27] "[35m[1m]kèa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:35.195.93.98 - - [19/Jan/2022 20:52:33] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:94.232.43.63 - - [19/Jan/2022 21:36:40] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [19/Jan/2022 21:36:40] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.43.63 - - [19/Jan/2022 21:36:40] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [19/Jan/2022 21:36:40] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:104.206.128.2 - - [19/Jan/2022 22:26:34] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:194.165.16.75 - - [19/Jan/2022 22:58:22] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:194.165.16.75 - - [19/Jan/2022 22:58:22] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:194.165.16.75 - - [19/Jan/2022 22:58:22] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:194.165.16.75 - - [19/Jan/2022 22:58:22] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:89.248.165.24 - - [20/Jan/2022 00:13:05] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:89.248.165.24 - - [20/Jan/2022 00:13:05] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:167.94.138.115 - - [20/Jan/2022 08:31:17] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:103.133.106.82 - - [20/Jan/2022 09:52:30] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x03\x00\x00\x00')
+INFO:werkzeug:103.133.106.82 - - [20/Jan/2022 09:52:30] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:128.199.148.150 - - [20/Jan/2022 14:22:52] "HEAD / HTTP/1.0" 200 -
+INFO:werkzeug:128.199.148.150 - - [20/Jan/2022 14:22:53] "[33mGET /system_api.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:128.199.148.150 - - [20/Jan/2022 14:22:55] "[33mGET /c/version.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:128.199.148.150 - - [20/Jan/2022 14:22:57] "[33mGET /streaming/clients_live.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:128.199.148.150 - - [20/Jan/2022 14:22:59] "[33mGET /stalker_portal/c/version.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:128.199.148.150 - - [20/Jan/2022 14:23:02] "[33mGET /stream/live.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:128.199.148.150 - - [20/Jan/2022 14:23:04] "[33mGET /flu/403.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:128.199.148.150 - - [20/Jan/2022 14:23:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:178.0.176.19 - - [20/Jan/2022 16:43:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:178.0.176.19 - - [20/Jan/2022 16:44:00] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:178.0.176.19 - - [20/Jan/2022 16:44:00] "GET /getimage/labrador-retriever-1210559_640.jpg HTTP/1.1" 200 -
+INFO:werkzeug:178.0.176.19 - - [20/Jan/2022 16:44:56] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:178.0.176.19 - - [20/Jan/2022 16:44:57] "GET /getimage/puppy-1207816_640.jpg HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://193.164.133.60:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:172.225.195.67 - - [20/Jan/2022 16:49:11] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:172.225.195.67 - - [20/Jan/2022 16:49:12] "GET /getimage/image.jpg HTTP/1.1" 200 -
+ERROR:werkzeug:167.94.138.44 - - [20/Jan/2022 21:53:40] code 400, message Bad request version ('Éêy\xad\x8ex´þ¦8Ì\x10P`')
+INFO:werkzeug:167.94.138.44 - - [20/Jan/2022 21:53:40] "[35m[1m î  ê±3Àæ¬)õOID!·Q ÅZðÌm2ªüÄÓgk ÙÆ?ÛÉêy­x´þ¦8ÌP`[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:167.94.138.44 - - [20/Jan/2022 21:53:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.94.138.44 - - [20/Jan/2022 21:53:42] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:89.248.165.24 - - [20/Jan/2022 21:55:41] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:89.248.165.24 - - [20/Jan/2022 21:55:41] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:104.140.188.2 - - [21/Jan/2022 01:19:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:45.154.255.147 - - [21/Jan/2022 02:29:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.56.80.65 - - [21/Jan/2022 02:29:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:werkzeug:94.232.43.63 - - [21/Jan/2022 03:42:53] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [21/Jan/2022 03:42:53] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.43.63 - - [21/Jan/2022 03:42:53] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [21/Jan/2022 03:42:53] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:178.32.197.89 - - [21/Jan/2022 05:49:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:62.210.5.253 - - [21/Jan/2022 06:33:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:104.28.62.54 - - [21/Jan/2022 08:44:50] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:104.28.62.54 - - [21/Jan/2022 08:44:50] "GET /getimage/0052101C-5A03-4A15-8B92-C581C818A963.jpeg HTTP/1.1" 200 -
+ERROR:werkzeug:167.248.133.113 - - [21/Jan/2022 09:55:16] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:167.248.133.113 - - [21/Jan/2022 09:55:16] "[35m[1m î  ê¾ÖB=Î°ÿK¥Ï \ù$ç4Hb¦­ñq}­ ±7¶5wY×*Ì]ìó·äIÍ*~AÇ°ÍÛ0ÿ¸FEþ &Ì¨Ì©À/À0À+À,ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:167.248.133.113 - - [21/Jan/2022 09:55:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.248.133.113 - - [21/Jan/2022 09:55:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:92.118.161.13 - - [21/Jan/2022 11:26:23] "GET / HTTP/1.0" 200 -
+ERROR:werkzeug:222.186.138.137 - - [21/Jan/2022 13:43:07] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:222.186.138.137 - - [21/Jan/2022 13:43:07] "[35m[1m î  êgë²p÷aÎ¾å?;JðØ¢±Ë´è­|øåç'( BìZá¯\fJÇ»á]>G&î|q1;´î|ß &Ì¨Ì©À/À0À+À,ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:162.142.125.44 - - [21/Jan/2022 14:24:45] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:162.142.125.44 - - [21/Jan/2022 14:24:45] "[35m[1m î  êc"cû9ÑÅ·D·³cü6âõ7$¾Óí±yñ½ ëÿÕkþ¶leOw:äu7±Î-©Ï2¸}´ &Ì¨Ì©À/À0À+À,ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:162.142.125.44 - - [21/Jan/2022 14:24:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:162.142.125.44 - - [21/Jan/2022 14:24:47] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:89.248.165.24 - - [21/Jan/2022 19:49:53] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:89.248.165.24 - - [21/Jan/2022 19:49:53] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:222.186.59.201 - - [21/Jan/2022 23:39:07] "[33mGET http://httpbin.org/ip HTTP/1.1[0m" 404 -
+INFO:werkzeug:222.186.59.201 - - [21/Jan/2022 23:39:07] "[33mGET http://httpbin.org/ip HTTP/1.1[0m" 404 -
+ERROR:werkzeug:222.186.59.201 - - [21/Jan/2022 23:39:07] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:222.186.59.201 - - [21/Jan/2022 23:39:07] "[35m[1m î  ê¢Ëicê=Þb9ò±o¨!çÆFÊIò;âòP ²÷]ôN÷¬NXÀ´zzoé~	IýV¸9§9ÿ &À/À0À+À,Ì¨Ì©ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:222.186.59.201 - - [21/Jan/2022 23:39:14] code 400, message Bad request syntax ('\x05\x01\x00')
+INFO:werkzeug:222.186.59.201 - - [21/Jan/2022 23:39:14] "[35m[1m [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:167.94.138.60 - - [22/Jan/2022 01:04:40] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Ê7ô\x10±À¸ÀQ')
+INFO:werkzeug:167.94.138.60 - - [22/Jan/2022 01:04:40] "[35m[1m î  êÊ7ô±À¸ÀQ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:167.94.138.60 - - [22/Jan/2022 01:04:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.94.138.60 - - [22/Jan/2022 01:04:41] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:94.232.43.63 - - [22/Jan/2022 03:22:50] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [22/Jan/2022 03:22:52] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.43.63 - - [22/Jan/2022 03:22:52] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [22/Jan/2022 03:22:52] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:89.248.165.24 - - [22/Jan/2022 17:04:37] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:89.248.165.24 - - [22/Jan/2022 17:04:37] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:208.100.26.232 - - [22/Jan/2022 19:08:23] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:208.100.26.232 - - [22/Jan/2022 19:10:21] "[33mGET /nmaplowercheck1642875021 HTTP/1.1[0m" 404 -
+INFO:werkzeug:208.100.26.232 - - [22/Jan/2022 19:10:21] "GET / HTTP/1.0" 200 -
+INFO:werkzeug:208.100.26.232 - - [22/Jan/2022 19:10:21] "[33mPOST /sdk HTTP/1.1[0m" 404 -
+INFO:werkzeug:208.100.26.232 - - [22/Jan/2022 19:10:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:208.100.26.232 - - [22/Jan/2022 19:10:22] "[33mGET /evox/about HTTP/1.1[0m" 404 -
+INFO:werkzeug:208.100.26.232 - - [22/Jan/2022 19:10:22] "[33mGET /HNAP1 HTTP/1.1[0m" 404 -
+INFO:werkzeug:208.100.26.232 - - [22/Jan/2022 19:10:27] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:185.156.72.10 - - [22/Jan/2022 19:23:30] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:185.156.72.10 - - [22/Jan/2022 19:23:30] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:185.156.72.10 - - [22/Jan/2022 20:26:34] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:185.156.72.10 - - [22/Jan/2022 20:26:34] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:138.68.128.9 - - [22/Jan/2022 21:36:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:138.68.128.9 - - [22/Jan/2022 21:36:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:185.40.4.163 - - [23/Jan/2022 00:44:29] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:94.232.43.63 - - [23/Jan/2022 02:00:45] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [23/Jan/2022 02:00:45] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.43.63 - - [23/Jan/2022 02:00:45] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [23/Jan/2022 02:00:45] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.227.254.79 - - [23/Jan/2022 08:41:16] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [23/Jan/2022 08:41:16] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.227.254.79 - - [23/Jan/2022 08:41:16] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [23/Jan/2022 08:41:16] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:14.162.95.16 - - [23/Jan/2022 12:57:54] code 400, message Bad request version ('HTTP/1.1\\r\\n')
+INFO:werkzeug:14.162.95.16 - - [23/Jan/2022 12:57:56] "[35m[1mGET / HTTP/1.1\r\n[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:52.13.81.160 - - [23/Jan/2022 13:35:40] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:78.128.112.14 - - [23/Jan/2022 14:26:40] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:78.128.112.14 - - [23/Jan/2022 14:26:40] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.227.254.79 - - [23/Jan/2022 16:40:55] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [23/Jan/2022 16:40:56] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.227.254.79 - - [23/Jan/2022 16:40:56] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [23/Jan/2022 16:40:56] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:89.248.165.24 - - [23/Jan/2022 16:55:49] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:89.248.165.24 - - [23/Jan/2022 16:55:49] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:47.99.168.169 - - [23/Jan/2022 17:40:01] "[33mGET /something?123456789?yydfwlyyds?yydswlAwMyqbln HTTP/1.1[0m" 404 -
+INFO:werkzeug:206.189.8.145 - - [24/Jan/2022 00:25:07] "GET / HTTP/1.0" 200 -
+ERROR:werkzeug:94.232.40.67 - - [24/Jan/2022 01:55:17] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.40.67 - - [24/Jan/2022 01:55:18] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.40.67 - - [24/Jan/2022 01:55:18] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.40.67 - - [24/Jan/2022 01:55:18] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:192.241.212.117 - - [24/Jan/2022 02:30:45] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:94.232.43.63 - - [24/Jan/2022 04:23:07] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [24/Jan/2022 04:23:07] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.43.63 - - [24/Jan/2022 04:23:07] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [24/Jan/2022 04:23:07] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:185.100.87.202 - - [24/Jan/2022 06:44:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.107.70.56 - - [24/Jan/2022 06:45:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:werkzeug:89.248.165.24 - - [24/Jan/2022 07:04:04] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:89.248.165.24 - - [24/Jan/2022 07:04:04] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:185.156.72.27 - - [24/Jan/2022 08:00:17] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:185.156.72.27 - - [24/Jan/2022 08:00:17] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:185.156.72.27 - - [24/Jan/2022 08:00:17] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:185.156.72.27 - - [24/Jan/2022 08:00:17] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.227.254.79 - - [24/Jan/2022 08:33:26] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [24/Jan/2022 08:33:26] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.227.254.79 - - [24/Jan/2022 08:33:26] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [24/Jan/2022 08:33:26] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:167.248.133.60 - - [24/Jan/2022 11:26:30] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:45.227.254.79 - - [24/Jan/2022 12:46:49] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [24/Jan/2022 12:46:49] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.227.254.79 - - [24/Jan/2022 12:46:49] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [24/Jan/2022 12:46:49] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:89.248.165.24 - - [24/Jan/2022 17:02:52] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:89.248.165.24 - - [24/Jan/2022 17:02:52] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.43.63 - - [24/Jan/2022 18:20:55] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [24/Jan/2022 18:20:55] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.43.63 - - [24/Jan/2022 18:20:55] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [24/Jan/2022 18:20:55] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:185.40.4.163 - - [24/Jan/2022 22:18:49] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:45.227.254.79 - - [25/Jan/2022 00:08:31] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [25/Jan/2022 00:08:31] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.227.254.79 - - [25/Jan/2022 00:08:31] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [25/Jan/2022 00:08:31] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:139.208.157.31 - - [25/Jan/2022 00:44:07] code 400, message Bad request version ('HTTP/1.1\\r\\n')
+INFO:werkzeug:139.208.157.31 - - [25/Jan/2022 00:44:07] "[35m[1mGET / HTTP/1.1\r\n[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:89.248.165.24 - - [25/Jan/2022 04:58:08] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:89.248.165.24 - - [25/Jan/2022 04:58:09] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:167.94.138.116 - - [25/Jan/2022 05:29:16] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03xÆ\x7fèfRA])\x9d\x00Ø')
+INFO:werkzeug:167.94.138.116 - - [25/Jan/2022 05:29:16] "[35m[1m î  êxÆèfRA]) Ø[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:167.94.138.116 - - [25/Jan/2022 05:29:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.94.138.116 - - [25/Jan/2022 05:29:17] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:45.227.254.79 - - [25/Jan/2022 09:59:43] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [25/Jan/2022 09:59:44] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.227.254.79 - - [25/Jan/2022 09:59:44] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [25/Jan/2022 09:59:44] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.227.254.79 - - [25/Jan/2022 12:33:17] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [25/Jan/2022 12:33:17] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.227.254.79 - - [25/Jan/2022 12:33:17] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:45.227.254.79 - - [25/Jan/2022 12:33:17] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:109.42.3.103 - - [25/Jan/2022 13:44:30] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:109.42.3.103 - - [25/Jan/2022 13:44:30] "GET /getimage/labrador-retriever-1210559_640.jpg HTTP/1.1" 200 -
+INFO:werkzeug:109.42.3.103 - - [25/Jan/2022 14:50:32] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:109.42.3.103 - - [25/Jan/2022 14:50:33] "[35m[1mGET /getimage/Screenshot%202022-01-25%20at%2014.50.10.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:109.42.3.103 - - [25/Jan/2022 14:51:08] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:109.42.3.103 - - [25/Jan/2022 14:51:08] "[35m[1mGET /getimage/Screenshot%202022-01-25%20at%2014.50.10.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:109.42.3.103 - - [25/Jan/2022 14:51:22] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:109.42.3.103 - - [25/Jan/2022 14:51:22] "GET /getimage/animal-3782188.jpg HTTP/1.1" 200 -
+INFO:werkzeug:109.42.3.103 - - [25/Jan/2022 14:52:55] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:109.42.3.103 - - [25/Jan/2022 14:52:55] "GET /getimage/Dome.jpg HTTP/1.1" 200 -
+INFO:werkzeug:104.28.62.54 - - [25/Jan/2022 20:04:41] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:104.28.62.54 - - [25/Jan/2022 20:04:42] "GET /getimage/image.jpg HTTP/1.1" 200 -
+ERROR:werkzeug:94.232.43.63 - - [25/Jan/2022 23:10:58] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [25/Jan/2022 23:10:58] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.43.63 - - [25/Jan/2022 23:10:58] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [25/Jan/2022 23:10:58] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:82.212.25.155 - - [25/Jan/2022 23:47:00] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:82.212.25.155 - - [25/Jan/2022 23:47:00] "GET /getimage/47FBCAB3-C80F-4102-A1B7-32EA5BB9C592.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:92.118.160.41 - - [26/Jan/2022 02:40:36] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:77.83.36.32 - - [26/Jan/2022 10:48:35] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:77.83.36.32 - - [26/Jan/2022 10:48:35] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:128.14.209.234 - - [26/Jan/2022 11:51:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:92.118.160.49 - - [26/Jan/2022 16:18:46] "GET / HTTP/1.0" 200 -
+ERROR:werkzeug:77.83.36.32 - - [26/Jan/2022 18:14:58] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:77.83.36.32 - - [26/Jan/2022 18:14:59] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:87.20.204.23 - - [26/Jan/2022 19:25:53] code 400, message Bad request version ('HTTP/1.1\\r\\n')
+INFO:werkzeug:87.20.204.23 - - [26/Jan/2022 19:25:54] "[35m[1mGET / HTTP/1.1\r\n[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:162.142.125.42 - - [26/Jan/2022 22:35:15] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:162.142.125.42 - - [26/Jan/2022 22:35:15] "[35m[1m î  êçÒ~ù¤m$X: ëWéÂ"L»VH|ÝÏ²_WW ÚéÆ}eí¡yjãB8ÐiØw)Ô6>Ã8 &Ì¨Ì©À/À0À+À,ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:162.142.125.42 - - [26/Jan/2022 22:35:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:162.142.125.42 - - [26/Jan/2022 22:35:17] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:94.232.43.63 - - [27/Jan/2022 05:41:23] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [27/Jan/2022 05:41:24] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.43.63 - - [27/Jan/2022 05:41:24] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [27/Jan/2022 05:41:24] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:167.94.138.115 - - [27/Jan/2022 08:13:59] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:167.94.138.115 - - [27/Jan/2022 08:13:59] "[35m[1m î  êY«w)ç³.yÎR'®9îJ]o	¥þ¤ll ±â]4îÊç¥UÃ(Nÿç_±ÑcÐPÓÛH2ÚÐ &Ì¨Ì©À/À0À+À,ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:167.94.138.115 - - [27/Jan/2022 08:14:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:167.94.138.115 - - [27/Jan/2022 08:14:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:45.129.56.200 - - [27/Jan/2022 13:27:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:185.56.80.65 - - [27/Jan/2022 13:27:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:werkzeug:45.61.146.242 - - [27/Jan/2022 15:35:57] code 400, message Bad request version ('À\x13À')
+INFO:werkzeug:45.61.146.242 - - [27/Jan/2022 15:35:57] "[35m[1m î  êU¯C6õO¾`}Î£ÐÜô£ÁËv×xsR Öwê&îåÖÁ³Â9òG @&üQÔÇi1Õ &À+À/À,À0Ì©Ì¨À	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.61.146.242 - - [27/Jan/2022 15:35:59] code 400, message Bad request version ('À\x13À')
+INFO:werkzeug:45.61.146.242 - - [27/Jan/2022 15:35:59] "[35m[1m î  êçÏò³ðàF®·ñØc­t.ÃÌmw34¹¡EA :u¬ )äcö:3KÆiÃvø©"òY'Ó§+ &À+À/À,À0Ì©Ì¨À	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:212.28.71.227 - - [27/Jan/2022 16:36:49] "GET / HTTP/1.1" 200 -

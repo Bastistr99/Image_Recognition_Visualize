@@ -36,7 +36,7 @@ def get_base64_encoded_image(image_path):
 def get_image_route(filename):
     filepath = "pictures/" + filename + "_no_bg.png"
     encoded_img_data = get_base64_encoded_image(filepath)
-   # os.remove(filepath)
+    os.remove(filepath)
     return encoded_img_data
 
 def upload_route(allowed_file, app):
