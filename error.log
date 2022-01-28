@@ -795,3 +795,24 @@ INFO:werkzeug:45.61.146.242 - - [27/Jan/2022 15:35:57] "[35m[1m î  êU�
 ERROR:werkzeug:45.61.146.242 - - [27/Jan/2022 15:35:59] code 400, message Bad request version ('À\x13À')
 INFO:werkzeug:45.61.146.242 - - [27/Jan/2022 15:35:59] "[35m[1m î  êçÏò³ðàF®·ñØc­t.ÃÌmw34¹¡EA :u¬ )äcö:3KÆiÃvø©"òY'Ó§+ &À+À/À,À0Ì©Ì¨À	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
 INFO:werkzeug:212.28.71.227 - - [27/Jan/2022 16:36:49] "GET / HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://193.164.133.60:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:178.0.176.249 - - [27/Jan/2022 17:45:49] "[35m[1mPOST /upload HTTP/1.1[0m" 201 -
+INFO:werkzeug:178.0.176.249 - - [27/Jan/2022 17:45:49] "GET /getimage/animal-3782188.jpg HTTP/1.1" 200 -
+ERROR:werkzeug:45.227.254.10 - - [27/Jan/2022 22:16:07] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:45.227.254.10 - - [27/Jan/2022 22:16:07] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.227.254.10 - - [27/Jan/2022 22:16:07] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:45.227.254.10 - - [27/Jan/2022 22:16:07] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.43.63 - - [28/Jan/2022 02:07:52] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [28/Jan/2022 02:07:52] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:94.232.43.63 - - [28/Jan/2022 02:07:52] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+INFO:werkzeug:94.232.43.63 - - [28/Jan/2022 02:07:52] "[35m[1m  ,'à     Cookie: mstshash=Domain[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:167.71.50.172 - - [28/Jan/2022 04:37:43] "HEAD / HTTP/1.0" 200 -
+INFO:werkzeug:167.71.50.172 - - [28/Jan/2022 04:37:43] "[33mGET /system_api.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.71.50.172 - - [28/Jan/2022 04:37:43] "[33mGET /c/version.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.71.50.172 - - [28/Jan/2022 04:37:43] "[33mGET /streaming/clients_live.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.71.50.172 - - [28/Jan/2022 04:37:44] "[33mGET /stalker_portal/c/version.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.71.50.172 - - [28/Jan/2022 04:37:44] "[33mGET /stream/live.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.71.50.172 - - [28/Jan/2022 04:37:44] "[33mGET /flu/403.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.71.50.172 - - [28/Jan/2022 04:37:44] "GET / HTTP/1.1" 200 -
