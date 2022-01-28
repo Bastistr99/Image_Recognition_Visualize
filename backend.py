@@ -7,7 +7,15 @@ from PIL import Image
 from werkzeug.utils import secure_filename
 from flask import json, request, jsonify
 import os
+from removebg import RemoveBg
+from dotenv import load_dotenv
 
+load_dotenv()
+apikey = os.getenv("api-token")
+rmbg = RemoveBg(apikey, "error.log")
+
+
+#Warum?
 
 model = tf.keras.models.load_model("CatsVsDogs-CNN.model")
 def prepare(filepath):
@@ -27,7 +35,7 @@ def get_base64_encoded_image(image_path):
         return base64.b64encode(img_file.read())
 
 def get_image_route(filename):
-    filepath = "pictures/" + filename
+    filepath = "pictures/" + filename + "_no_bg.png"
     encoded_img_data = get_base64_encoded_image(filepath)
     os.remove(filepath)
     return encoded_img_data
@@ -51,7 +59,7 @@ def upload_route(allowed_file, app):
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             filepath = "./pictures/" + filename
             image = Image.open(filepath)
-            # rmbg.remove_background_from_img_file(filepath)
+            rmbg.remove_background_from_img_file(filepath)
             width, height = image.size
             success = True
         else:
@@ -66,7 +74,7 @@ def upload_route(allowed_file, app):
         prediction = model.predict(prepare(filepath), verbose=0)
         encodedNumpyData = json.dumps(prediction, cls=NumpyArrayEncoder) 
         resp = jsonify({"message": encodedNumpyData, "prediction": str(prediction[0][0]), "height": str(height), "width": str(width)})
-        # os.remove(filepath)
+        #os.remove(filepath)
         resp.status_code = 201
         return resp
     else:
