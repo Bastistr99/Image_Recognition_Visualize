@@ -10,6 +10,7 @@ import Section from "./components/Section";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
+import CircularProgress from "@mui/material/CircularProgress";
 
 function App() {
   const [bilder, setBilder] = useState({});
@@ -22,6 +23,7 @@ function App() {
   const [ergebnis_txt, setErgebnistxt] = useState("Hund!");
   const [hacken, setHacken] = useState(false);
   const [buttontext, setButtonText] = useState("Upload!");
+  const [spinner, setSpinner] = useState(true);
 
   const buttonstyle = {
     position: "relative",
@@ -47,6 +49,7 @@ function App() {
   const get_image = () => {
     axios.get("http://basti.mkth.eu:5000/getimage/" + filename).then((res) => {
       setMenschBild(res.data);
+      setSpinner(true);
     });
   };
 
@@ -124,6 +127,7 @@ function App() {
 
   const uploadBild = () => {
     setHacken(false);
+    setSpinner(false);
     setButtonText("Try Again!");
     //Upload Image
     const formData = new FormData();
@@ -132,12 +136,11 @@ function App() {
       get_image();
       //Get Prediction and set Prediction and Pictures to the result
       getPredictionPercentage(res.data.prediction);
-      console.log(res);
 
       //Format der Fotos bestimmen
-      let picwidth = parseInt(res.data.width);
-      let picheight = parseInt(res.data.height);
-      getPictureFormat(picwidth, picheight);
+      // let picwidth = parseInt(res.data.width);
+      // let picheight = parseInt(res.data.height);
+      // getPictureFormat(picwidth, picheight);
     });
   };
 
@@ -168,7 +171,6 @@ function App() {
 
   const theme = createTheme();
 
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -176,11 +178,17 @@ function App() {
         <Header title="Cat or Dog?" sections={sections} key={sections.index} />
         <main>
           <MainFeaturedPost post={post} />
-          <Grid container spacing={4}>
-            {featuredPosts.map((posts) => (
-              <Section post={posts} key={posts.title} />
-            ))}
-          </Grid>
+          {spinner ? (
+            <Grid container spacing={4}>
+              {featuredPosts.map((posts) => (
+                <Section post={posts} key={posts.title} />
+              ))}
+            </Grid>
+          ) : (
+            <Grid container spacing={4} sx={{display: "flex", alignItems: "center", justifyContent: "center", mt: "15vh", mb:"20vh"}}>
+              <CircularProgress />
+            </Grid>
+          )}
         </main>
         <Grid item={12} mb={"5vh"}>
           <input
@@ -195,13 +203,15 @@ function App() {
           </label>
         </Grid>
         <Grid item={12}>
-            <button
-              className="uploadbutton"
-              onClick={uploadBild}
-              style={buttonstyle}
-            >
-              <Typography variant="h5" margin="auto">{buttontext}</Typography>
-            </button>
+          <button
+            className="uploadbutton"
+            onClick={uploadBild}
+            style={buttonstyle}
+          >
+            <Typography variant="h5" margin="auto">
+              {buttontext}
+            </Typography>
+          </button>
         </Grid>
       </Container>
     </ThemeProvider>

@@ -20,7 +20,7 @@ function Header(props) {
           color="inherit"
           align="center"
           noWrap
-          sx={{ flex: 1 }}
+          sx={{ flex: 1, display: {lg: "block", md: "block", xs: "none"} }}
         >
           {title}
         </Typography>
@@ -29,6 +29,8 @@ function Header(props) {
           variant="h6"
           color="inherit"
           align="right"
+          position="absolute"
+          right="0"
           noWrap
           width="150px"
         >
