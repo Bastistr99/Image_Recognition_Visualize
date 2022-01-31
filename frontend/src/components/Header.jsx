@@ -11,8 +11,8 @@ function Header(props) {
   return (
     <React.Fragment>
       <Toolbar sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <div style={{marginLeft: "0px", align: "left"}}>
-          <img src={logo} alt="Display logo" width="150px" height="100px"/>
+        <div style={{position: "absolute", left: "0", zIndex: "-1"}}>
+          <img src={logo} alt="Display logo" width="150px" height="100px" />
         </div>
         <Typography
           component="h2"
