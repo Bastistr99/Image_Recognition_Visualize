@@ -1,8 +1,5 @@
 //ignorieren aller Bilder aufgrund der Größe
-*.jpg
 *node_modules/*
-*.png
-*.jpeg
 /node_modules
 /.pnp
 .pnp.js
