@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import CheckIcon from "@mui/icons-material/Check";
 import Header from "./components/Header";
-import { Container, Typography } from "@mui/material";
+import { Button, Container, Paper, Typography } from "@mui/material";
 import MainFeaturedPost from "./components/MainFeaturePost";
 import { Grid } from "@mui/material";
 import Section from "./components/Section";
@@ -14,6 +14,7 @@ import image from "./model-2911330_640.jpg"; //Mensch
 import dogimage from "./dog-gfd563f370_1280.jpg";
 import dog2 from "./pet-3389729_640.jpg";
 import cat from "./cat-6463284_640.jpg";
+import Footer from "./components/Footer";
 
 function App() {
   const [bilder, setBilder] = useState({});
@@ -24,22 +25,8 @@ function App() {
   const [spinner, setSpinner] = useState(true);
   const [inputImage, setInputImage] = useState(image);
 
-  const buttonstyle = {
-    position: "relative",
-    display: "flex",
-    height: "80px",
-    width: "200px",
-    margin: "auto",
-    top: "0",
-    bottom: "0",
-    left: "0",
-    right: "0",
-    borderRadius: "30px",
-    backgroundColor: "#ef9d10",
-    border: "2px solid #3b4d61",
-    color: "#3b4d61",
-  };
-  const selectBild = async(bild) => {
+  
+  const selectBild = async (bild) => {
     let res = await bild.target.files[0];
     setBilder(res);
     setHacken(true);
@@ -63,16 +50,16 @@ function App() {
     const formData = new FormData();
     formData.append("bild", bilder);
     axios.post("http://basti.mkth.eu:5000/upload", formData).then((res) => {
-      console.log(res.data.prediction)
+      console.log(res.data.prediction);
       getPredictionPercentage(res.data.prediction);
       setSpinner(true);
     });
   };
 
   const sections = [
-    { title: "Hello!", url: "#" },
-    { title: "Try it", url: "#" },
-    { title: "About us!", url: "#" },
+    { title: "Ergebnisse", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"},
+    { title: "Try it", url: "#tryit" },
+    { title: "About!", url: "#about" },
   ];
 
   const post = {
@@ -101,53 +88,72 @@ function App() {
       <CssBaseline />
       <Container maxWidth="lg">
         <Header title="Cat or Dog?" sections={sections} key={sections.index} />
-        <main>
-          <MainFeaturedPost post={post} />
-          {spinner ? (
-            <Grid container spacing={4}>
-              {featuredPosts.map((posts) => (
-                <Section post={posts} key={posts.title} />
-              ))}
+
+        <MainFeaturedPost post={post} />
+        <div id="tryit">
+          <Paper sx={{ mt: "5vh", mb: "5vh" }} elevation={5}>
+            {spinner ? (
+              <Grid container spacing={4}>
+                {featuredPosts.map((posts) => (
+                  <Section post={posts} key={posts.title} />
+                ))}
+              </Grid>
+            ) : (
+              <Grid
+                container
+                spacing={4}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  mt: "15vh",
+                  mb: "20vh",
+                }}
+              >
+                <CircularProgress />
+              </Grid>
+            )}
+
+            <Grid item={12} mb={"5vh"}>
+              <input
+                type="file"
+                onChange={selectBild}
+                accept="image/*"
+                id="inputfile"
+              />
+              <label for="inputfile">
+                <AddToPhotosIcon /> &nbsp; Choose a Photo! &nbsp;
+                {hacken ? <CheckIcon /> : ""}
+              </label>
             </Grid>
-          ) : (
-            <Grid
-              container
-              spacing={4}
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                mt: "15vh",
-                mb: "20vh",
-              }}
-            >
-              <CircularProgress />
+            <Grid item={12} sx={{ pb: "3vh", pt: "3vh" }}>
+              <Button
+                className="uploadbutton"
+                onClick={uploadBild}
+                variant="contained"
+                sx={{
+                  display: "flex",
+                  position: "relative",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  borderRadius: "30px",
+                  color: "#3b4d61",
+                  backgroundColor: "#ef9d10",
+                }}
+              >
+                <Typography variant="h6" margin="auto">
+                  {buttontext}
+                </Typography>
+              </Button>
             </Grid>
-          )}
-        </main>
-        <Grid item={12} mb={"5vh"}>
-          <input
-            type="file"
-            onChange={selectBild}
-            accept="image/*"
-            id="inputfile"
-          />
-          <label for="inputfile">
-            <AddToPhotosIcon /> &nbsp; Choose a Photo! &nbsp;
-            {hacken ? <CheckIcon /> : ""}
-          </label>
-        </Grid>
-        <Grid item={12}>
-          <button
-            className="uploadbutton"
-            onClick={uploadBild}
-            style={buttonstyle}
-          >
-            <Typography variant="h5" margin="auto">
-              {buttontext}
-            </Typography>
-          </button>
-        </Grid>
+          </Paper>
+        </div>
+        <div id="about">
+          <Paper sx={{ mt: "3vh", mb:"3vh" }} elevation={0}>
+            <Typography variant="h2" sx={{display: "flex", alignContent: "center", justifyContent: "center"}}>Danke fürs Testen!</Typography>
+          </Paper>
+        </div>
+        <Footer />
       </Container>
     </ThemeProvider>
   );
