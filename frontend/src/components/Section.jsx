@@ -12,7 +12,7 @@ function Section(props) {
           <CardMedia
             component="img"
             sx={{ boxSizing: "border-box", width: "100%", height: { xs: "50vh", sm: "50vh"}, display: { xs: 'block', sm: 'block' } }}
-            src={`data:image/jpeg;base64,${post.image}`}
+            src={post.image}
             alt={post.imageLabel}
           />
         </Card>
