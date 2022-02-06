@@ -49,7 +49,7 @@ function App() {
     //Upload Image
     const formData = new FormData();
     formData.append("bild", bilder);
-    axios.post("http://basti.mkth.eu:5000/upload", formData).then((res) => {
+    axios.post("http://193.164.133.60/upload", formData).then((res) => {
       console.log(res.data.prediction);
       getPredictionPercentage(res.data.prediction);
       setSpinner(true);
